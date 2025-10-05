@@ -10,21 +10,63 @@
     <meta name="keywords" content="Epstein files, Jeffrey Epstein, transparency, accountability, file tracker, DC Pulse, document release">
     <meta name="author" content="Inside DC Pulse">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://[O-SEU-URL-AQUI.COM]">
+    <link rel="canonical" href="https://insidedcpulse.com">
+
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="wQ6FpgKM8fCypsGimqFwuVglazMzbPTkEFbECA-lGvk" />
 
     <!-- Open Graph Tags (for Social Media & AI Previews) -->
     <meta property="og:title" content="Epstein Files Tracker: The Wait Continues">
     <meta property="og:description" content="It's been days since the last document release. How long must we wait for full transparency? Track the time live.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://[O-SEU-URL-AQUI.COM]">
-    <meta property="og:image" content="https://placehold.co/1200x630/ff3333/FFFFFF?text=Epstein+Files%0AAccountability+Tracker">
+    <meta property="og:url" content="https://insidedcpulse.com">
+    <meta property="og:image" content="https://placehold.co/1200x630/1a1a1a/FFFFFF?text=InsideDCPulse.com%0AEpstein+Files+Tracker">
     <meta property="og:site_name" content="Inside DC Pulse">
 
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Epstein Files Tracker: The Wait Continues">
     <meta name="twitter:description" content="It's been days since the last document release. How long must we wait for full transparency? Track the time live.">
-    <meta name="twitter:image" content="https://placehold.co/1200x630/ff3333/FFFFFF?text=Epstein+Files%0AAccountability+Tracker">
+    <meta name="twitter:image" content="https://placehold.co/1200x630/1a1a1a/FFFFFF?text=InsideDCPulse.com%0AEpstein+Files+Tracker">
+
+    <!-- Schema.org Markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://insidedcpulse.com"
+      },
+      "headline": "Epstein Files: The Battle for Transparency and the Missing Client List",
+      "image": "https://placehold.co/1200x630/1a1a1a/FFFFFF?text=InsideDCPulse.com%0AEpstein+Files+Tracker",
+      "datePublished": "2025-10-05T12:00:00Z",
+      "dateModified": "2025-10-05T12:00:00Z",
+      "author": {
+        "@type": "Organization",
+        "name": "Inside DC Pulse"
+      },
+       "publisher": {
+        "@type": "Organization",
+        "name": "Inside DC Pulse",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://placehold.co/600x60/ff3333/FFFFFF?text=Inside+DC+Pulse"
+        }
+      },
+      "description": "An in-depth look at the Epstein Files scandal, the high-profile names involved, and the political battle over the missing client list and government transparency."
+    }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CKVH6G83R"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8CKVH6G83R');
+    </script>
 
     <style>
         * {
@@ -191,32 +233,10 @@
         .highlight-info p {
             font-size: 1.1em;
             color: #e0e0e0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
         }
         
         .highlight-info p:first-child {
             margin-bottom: 10px;
-        }
-        
-        .verify-btn {
-            background: rgba(66, 133, 244, 0.2);
-            color: #8ab4f8;
-            border: 1px solid rgba(66, 133, 244, 0.5);
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 0.8em;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-        }
-        .verify-btn:hover {
-            background: rgba(66, 133, 244, 0.4);
-            color: #fff;
         }
 
         .buttons-container {
@@ -255,21 +275,55 @@
             border-color: rgba(255, 255, 255, 0.4);
         }
 
-        .twitter-btn { background: linear-gradient(145deg, #1DA1F2, #0d8bd9); }
-        .twitter-btn:hover { box-shadow: 0 8px 25px rgba(29, 161, 242, 0.4); }
-        .facebook-btn { background: linear-gradient(145deg, #1877F2, #0e63d1); }
-        .facebook-btn:hover { box-shadow: 0 8px 25px rgba(24, 119, 242, 0.4); }
-        .whatsapp-btn { background: linear-gradient(145deg, #25D366, #1ea952); }
-        .whatsapp-btn:hover { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); }
-        .reddit-btn { background: linear-gradient(145deg, #FF4500, #e63e00); }
-        .reddit-btn:hover { box-shadow: 0 8px 25px rgba(255, 69, 0, 0.4); }
-        .copy-btn { background: linear-gradient(145deg, #6c757d, #5a6268); cursor: pointer; }
-        .copy-btn:hover { box-shadow: 0 8px 25px rgba(108, 117, 125, 0.4); }
-        .copy-btn.copied { background: linear-gradient(145deg, #28a745, #218838); }
+        .twitter-btn {
+            background: linear-gradient(145deg, #1DA1F2, #0d8bd9);
+        }
+
+        .twitter-btn:hover {
+            box-shadow: 0 8px 25px rgba(29, 161, 242, 0.4);
+        }
+
+        .facebook-btn {
+            background: linear-gradient(145deg, #1877F2, #0e63d1);
+        }
+
+        .facebook-btn:hover {
+            box-shadow: 0 8px 25px rgba(24, 119, 242, 0.4);
+        }
+
+        .whatsapp-btn {
+            background: linear-gradient(145deg, #25D366, #1ea952);
+        }
+
+        .whatsapp-btn:hover {
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        .reddit-btn {
+            background: linear-gradient(145deg, #FF4500, #e63e00);
+        }
+
+        .reddit-btn:hover {
+            box-shadow: 0 8px 25px rgba(255, 69, 0, 0.4);
+        }
+
+        .copy-btn {
+            background: linear-gradient(145deg, #6c757d, #5a6268);
+            cursor: pointer;
+        }
+
+        .copy-btn:hover {
+            box-shadow: 0 8px 25px rgba(108, 117, 125, 0.4);
+        }
+
+        .copy-btn.copied {
+            background: linear-gradient(145deg, #28a745, #218838);
+        }
 
         .action-btn {
             display: inline-block;
             padding: 15px 40px;
+            color: white;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
@@ -277,140 +331,91 @@
             transition: all 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 1px;
-            border: 2px solid;
         }
-
-        .action-btn:hover {
-            transform: scale(1.05);
-        }
-
+        
         .donate-btn {
             background: linear-gradient(145deg, #ffa500, #ff8c00);
-            color: white;
-            border-color: rgba(255, 165, 0, 0.3);
+            border: 2px solid rgba(255, 165, 0, 0.3);
         }
 
         .donate-btn:hover {
+            background: linear-gradient(145deg, #ff8c00, #ffa500);
+            transform: scale(1.05);
             box-shadow: 0 10px 30px rgba(255, 165, 0, 0.5);
         }
-
-        .gemini-btn {
-            background: linear-gradient(145deg, #4285F4, #357ae8);
-            color: white;
-            border-color: rgba(66, 133, 244, 0.3);
-        }
         
-        .gemini-btn:hover {
-            box-shadow: 0 10px 30px rgba(66, 133, 244, 0.5);
-        }
-
-        .modal-overlay {
+        /* Modal Styles */
+        .modal {
+            display: none;
             position: fixed;
-            top: 0;
+            z-index: 1000;
             left: 0;
+            top: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.85);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            padding: 20px;
-            backdrop-filter: blur(5px);
-        }
-
-        .modal-content {
-            background: #2a2a2a;
-            padding: 30px 40px;
-            border-radius: 15px;
-            max-width: 700px;
-            max-height: 90vh;
-            overflow-y: auto;
-            width: 100%;
-            text-align: left;
-            position: relative;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+            animation: fadeIn 0.3s;
         }
         
-        .modal-content h2 {
-            margin-bottom: 20px;
-            text-align: center;
+        .modal-content {
+            background-color: #2d2d2d;
+            margin: 10% auto;
+            padding: 30px;
+            border: 1px solid #555;
+            width: 80%;
+            max-width: 700px;
+            border-radius: 15px;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.7);
+            animation: slideIn 0.3s;
         }
 
-        .modal-content p, .modal-content li {
+        .modal h2 {
+            color: #ff6666;
+            margin-bottom: 20px;
+        }
+        .modal p, .modal li {
             color: #ccc;
             line-height: 1.7;
-            margin-bottom: 15px;
-        }
-
-        .modal-content ul {
-            list-style-position: inside;
-            padding-left: 0;
-            margin-bottom: 15px;
-        }
-
-        .modal-content a {
-            color: #4285F4;
-            text-decoration: none;
-        }
-
-        .modal-content a:hover {
-            text-decoration: underline;
-        }
-
-        #legalModal h2 { color: #ff8c00; }
-        #summaryModal h2 { color: #4285F4; }
-        
-        .sources-list {
-            border-top: 1px solid #444;
-            padding-top: 15px;
-            margin-top: 20px;
-        }
-
-        .sources-list h3 {
-            color: #aaa;
-            font-size: 1em;
             margin-bottom: 10px;
         }
-
+        .modal ul {
+            padding-left: 20px;
+        }
+        
         .close-btn {
+            color: #aaa;
             position: absolute;
             top: 15px;
-            right: 20px;
-            font-size: 2em;
-            color: #888;
+            right: 25px;
+            font-size: 28px;
+            font-weight: bold;
             cursor: pointer;
-            transition: color 0.3s ease;
+        }
+        
+        .close-btn:hover, .close-btn:focus {
+            color: white;
         }
 
-        .close-btn:hover {
-            color: #fff;
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        @keyframes slideIn {
+            from {transform: translateY(-50px);}
+            to {transform: translateY(0);}
         }
 
         .legal-link {
-            cursor: pointer;
+            display: inline-block;
+            margin-top: 20px;
             color: #999;
-            text-decoration: underline;
-            transition: color 0.3s ease;
+            text-decoration: none;
+            font-size: 0.9em;
         }
-
         .legal-link:hover {
             color: #fff;
-        }
-
-        .loader {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            border: 5px solid #555;
-            border-top-color: #fff;
-            animation: spin 1s linear infinite;
-            margin: 40px auto;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
         }
 
         /* Article Styles */
@@ -473,6 +478,10 @@
             }
             .time-value { font-size: 2.5em; }
             .promises p { font-size: 1em; }
+            .modal-content {
+                width: 95%;
+                margin: 20% auto;
+            }
         }
     </style>
 </head>
@@ -512,17 +521,28 @@
 
         <div class="timeline">
             <h3>📋 TIMELINE OF RELEASES:</h3>
-            <div class="timeline-item"><span class="timeline-date">3 Jan 2024</span> - First batch released (943 pages)</div>
-            <div class="timeline-item"><span class="timeline-date">10 Jan 2024</span> - Second batch (4,553 pages total)</div>
-            <div class="timeline-item"><span class="timeline-date">27 Feb 2025</span> - DOJ declassification begins</div>
-            <div class="timeline-item"><span class="timeline-date">2 Sep 2025</span> - House Committee releases 33,000+ pages</div>
-            <div class="timeline-item"><span class="timeline-date">26 Sep 2025</span> - Third batch (Musk, Thiel, Bannon mentioned)</div>
-            <div class="timeline-item"><span class="timeline-date">??? ????</span> - Next release: <strong>Unknown</strong></div>
+            <div class="timeline-item">
+                <span class="timeline-date">3 Jan 2024</span> - First batch released (943 pages)
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-date">10 Jan 2024</span> - Second batch (4,553 pages total)
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-date">27 Feb 2025</span> - DOJ declassification begins
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-date">2 Sep 2025</span> - House Committee releases 33,000+ pages
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-date">26 Sep 2025</span> - Third batch (Musk, Thiel, Bannon mentioned)
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-date">??? ????</span> - Next release: <strong>Unknown</strong>
+            </div>
         </div>
 
         <div class="buttons-container">
             <a href="https://buy.stripe.com/4gM28s0xU0Ff4Cp5oN3wQ01" class="action-btn donate-btn" target="_blank">💰 Support Transparency</a>
-            <a href="#" class="action-btn gemini-btn" id="geminiSummaryBtn">✨ Get Latest Summary</a>
         </div>
 
         <div class="social-buttons">
@@ -535,10 +555,7 @@
 
         <div class="footer">
             <div class="highlight-info">
-                <p>
-                    <span><strong>75% of Americans</strong> want full transparency on the Epstein files.</span>
-                    <button id="verifyStatBtn" class="verify-btn">✨ Verify</button>
-                </p>
+                <p><strong>75% of Americans</strong> want full transparency on the Epstein files.</p>
                 <p>Last updated: September 26, 2025</p>
             </div>
 
@@ -624,25 +641,25 @@
                 <p style="margin-top: 5px; font-size: 0.9em;">Tracking accountability in Washington</p>
                 <p style="margin-top: 10px;"><a href="mailto:insidedcpulse@gmail.com" style="color: #ff9999; text-decoration: none;">insidedcpulse@gmail.com</a></p>
                 <p style="margin-top: 15px; font-size: 0.85em; color: #888888;">🔒 Secure donations processed by Stripe</p>
-                <p style="margin-top: 15px; font-size: 0.85em;"><span class="legal-link" id="legalLink">Legal & Privacy</span></p>
             </div>
+            <a href="#" id="legalLink" class="legal-link">Legal & Privacy</a>
         </div>
     </div>
 
     <!-- Legal Modal -->
-    <div class="modal-overlay" id="legalModal">
+    <div id="legalModal" class="modal">
         <div class="modal-content">
-            <span class="close-btn" id="closeLegalBtn">&times;</span>
-            <h2>Legal Information</h2>
+            <span class="close-btn" id="closeLegal">&times;</span>
+            <h2>Legal & Privacy Information</h2>
             <p><strong>Privacy Policy:</strong></p>
             <ul>
-                <li>This website is purely informational and does not collect, store, or share any personal data from its visitors.</li>
-                <li>We do not use cookies or any other tracking technologies. Your visit is completely anonymous.</li>
+                <li>This website does not collect any personal data from its visitors.</li>
+                <li>We do not use cookies or any other tracking technologies.</li>
+                <li>Your privacy is fully respected.</li>
             </ul>
             <p><strong>Donations:</strong></p>
             <ul>
-                <li>All donations are processed securely by Stripe, a trusted third-party payment platform.</li>
-                <li>We do not see, handle, or store any of your payment information. Stripe's privacy policy applies to all transactions.</li>
+                <li>All donations are processed securely through Stripe. We do not handle or store any of your financial information.</li>
             </ul>
             <p><strong>Disclaimer:</strong></p>
             <ul>
@@ -652,18 +669,8 @@
         </div>
     </div>
 
-    <!-- Gemini Summary Modal -->
-    <div class="modal-overlay" id="summaryModal">
-        <div class="modal-content">
-            <span class="close-btn" id="closeSummaryBtn">&times;</span>
-            <h2 id="summaryModalTitle">✨ AI-Powered Summary</h2>
-            <div id="summaryContent">
-                <!-- Loader and content will be injected here -->
-            </div>
-        </div>
-    </div>
-
     <script>
+        // Date of last file release: September 26, 2025
         const lastReleaseDate = new Date('2025-09-26T00:00:00').getTime();
 
         function updateCounter() {
@@ -684,213 +691,60 @@
         }
 
         function updateSocialLinks(days) {
-            const url = encodeURIComponent(window.location.href);
+            const url = encodeURIComponent("https://insidedcpulse.com");
             const twitterText = encodeURIComponent(`🚨 It's been ${days} days since the last Epstein files release. Where is the transparency? #EpsteinFiles #Transparency #InsideDCPulse`);
-            const facebookText = encodeURIComponent(`75% of Americans want full transparency on the Epstein files. It's been ${days} days since the last release. When will they deliver?`);
             const whatsappText = encodeURIComponent(`🚨 It's been ${days} days since the last Epstein files release. They promised transparency... Check the tracker:`);
             const redditTitle = encodeURIComponent(`Epstein Files Tracker: ${days} days since last release. Where's the accountability?`);
 
             document.getElementById('twitterBtn').href = `https://twitter.com/intent/tweet?text=${twitterText}&url=${url}`;
-            document.getElementById('facebookBtn').href = `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${facebookText}`;
+            document.getElementById('facebookBtn').href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
             document.getElementById('whatsappBtn').href = `https://wa.me/?text=${whatsappText}%20${url}`;
             document.getElementById('redditBtn').href = `https://reddit.com/submit?url=${url}&title=${redditTitle}`;
         }
 
         function copyLink() {
-            const url = window.location.href;
-            const textArea = document.createElement("textarea");
-            textArea.value = url;
-            document.body.appendChild(textArea);
-            textArea.select();
+            const url = "https://insidedcpulse.com";
+            const tempInput = document.createElement('input');
+            document.body.appendChild(tempInput);
+            tempInput.value = url;
+            tempInput.select();
             try {
                 document.execCommand('copy');
                 const btn = document.getElementById('copyBtn');
                 const originalText = btn.innerHTML;
                 btn.innerHTML = '✅ Copied!';
                 btn.classList.add('copied');
+                
                 setTimeout(() => {
                     btn.innerHTML = originalText;
                     btn.classList.remove('copied');
                 }, 2000);
             } catch (err) {
-                console.error('Fallback: Oops, unable to copy', err);
+                alert('Failed to copy link.');
             }
-            document.body.removeChild(textArea);
+            document.body.removeChild(tempInput);
         }
+
+        document.getElementById('copyBtn').addEventListener('click', copyLink);
         
-        document.getElementById('copyBtn').addEventListener('click', (e) => {
-            e.preventDefault();
-            copyLink();
-        });
-
-
-        // --- Modal Functionality ---
+        // Modal Logic
         const legalModal = document.getElementById('legalModal');
-        const summaryModal = document.getElementById('summaryModal');
-
-        document.getElementById('legalLink').onclick = (e) => { e.preventDefault(); legalModal.style.display = 'flex'; };
-        document.getElementById('closeLegalBtn').onclick = () => { legalModal.style.display = 'none'; };
-        document.getElementById('closeSummaryBtn').onclick = () => { summaryModal.style.display = 'none'; };
+        const legalLink = document.getElementById('legalLink');
+        const closeLegal = document.getElementById('closeLegal');
         
-        window.addEventListener('click', (event) => {
+        legalLink.onclick = () => legalModal.style.display = "block";
+        closeLegal.onclick = () => legalModal.style.display = "none";
+        
+        window.onclick = function(event) {
             if (event.target == legalModal) {
-                legalModal.style.display = 'none';
+                legalModal.style.display = "none";
             }
-            if (event.target == summaryModal) {
-                summaryModal.style.display = 'none';
-            }
-        });
-
-        // --- Gemini API Functionality ---
-        const geminiSummaryBtn = document.getElementById('geminiSummaryBtn');
-        const verifyStatBtn = document.getElementById('verifyStatBtn');
-        const summaryContent = document.getElementById('summaryContent');
-        const summaryModalTitle = document.getElementById('summaryModalTitle');
-
-        geminiSummaryBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            summaryModalTitle.innerHTML = '✨ AI-Powered Summary';
-            summaryModal.style.display = 'flex';
-            getLatestSummary();
-        });
-
-        verifyStatBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            summaryModalTitle.innerHTML = '✨ AI Fact-Check';
-            summaryModal.style.display = 'flex';
-            verifyStatistic();
-        });
-
-        async function getLatestSummary() {
-            summaryContent.innerHTML = '<div class="loader"></div>';
-
-            const apiKey = ""; // API key is handled by the environment
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
-
-            const systemPrompt = "You are a neutral, factual news analyst. Your task is to summarize the most recent significant news and official developments regarding the Jeffrey Epstein files based on public information. Do not speculate or include opinions. Focus on information from the last 6 months.";
-            const userQuery = "Summarize the latest developments on the Epstein files release.";
-
-            const payload = {
-                contents: [{ parts: [{ text: userQuery }] }],
-                tools: [{ "google_search": {} }],
-                systemInstruction: { parts: [{ text: systemPrompt }] },
-            };
-
-            try {
-                const response = await fetchWithExponentialBackoff(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-
-                if (!response.ok) { throw new Error(`API request failed with status ${response.status}`); }
-                
-                const result = await response.json();
-                const candidate = result.candidates?.[0];
-
-                if (candidate && candidate.content?.parts?.[0]?.text) {
-                    const text = candidate.content.parts[0].text;
-                    let sources = [];
-                    const groundingMetadata = candidate.groundingMetadata;
-                    if (groundingMetadata && groundingMetadata.groundingAttributions) {
-                        sources = groundingMetadata.groundingAttributions
-                            .map(attr => ({ uri: attr.web?.uri, title: attr.web?.title }))
-                            .filter(source => source.uri && source.title);
-                    }
-                    displaySummary(text, sources);
-                } else {
-                    displaySummaryError("Could not retrieve a summary at this time. The response from the AI was empty.");
-                }
-            } catch (error) {
-                console.error("Error fetching summary:", error);
-                displaySummaryError(`An error occurred while fetching the summary: ${error.message}`);
-            }
-        }
-
-        async function verifyStatistic() {
-            summaryContent.innerHTML = '<div class="loader"></div>';
-
-            const apiKey = 'AIzaSyCKoUbV93OBZ3S72FlXLgZzETciHM2xES8';
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
-
-            const systemPrompt = "You are a neutral fact-checking assistant. Your goal is to find and present evidence from reliable sources (like polls or reputable news organizations) regarding a specific statistic. State clearly whether the sources confirm, contradict, or provide nuance to the claim. Summarize the findings and always cite your sources.";
-            const userQuery = "Fact-check the claim that '75% of Americans want full transparency on the Epstein files.' Find recent polls or reports from the last 1-2 years that address public opinion on this topic.";
-
-            const payload = {
-                contents: [{ parts: [{ text: userQuery }] }],
-                tools: [{ "google_search": {} }],
-                systemInstruction: { parts: [{ text: systemPrompt }] },
-            };
-
-            try {
-                const response = await fetchWithExponentialBackoff(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-
-                if (!response.ok) { throw new Error(`API request failed with status ${response.status}`); }
-                
-                const result = await response.json();
-                const candidate = result.candidates?.[0];
-
-                if (candidate && candidate.content?.parts?.[0]?.text) {
-                    const text = candidate.content.parts[0].text;
-                    let sources = [];
-                    const groundingMetadata = candidate.groundingMetadata;
-                    if (groundingMetadata && groundingMetadata.groundingAttributions) {
-                        sources = groundingMetadata.groundingAttributions
-                            .map(attr => ({ uri: attr.web?.uri, title: attr.web?.title }))
-                            .filter(source => source.uri && source.title);
-                    }
-                    displaySummary(text, sources);
-                } else {
-                    displaySummaryError("Could not retrieve a fact-check at this time. The response from the AI was empty.");
-                }
-            } catch (error) {
-                console.error("Error fetching fact-check:", error);
-                displaySummaryError(`An error occurred while fetching the fact-check: ${error.message}`);
-            }
-        }
-
-        function displaySummary(summaryText, sources) {
-            let sourcesHtml = '';
-            if (sources.length > 0) {
-                sourcesHtml = '<div class="sources-list"><h3>Sources:</h3><ul>';
-                sources.forEach(source => {
-                    sourcesHtml += `<li><a href="${source.uri}" target="_blank" rel="noopener noreferrer">${source.title}</a></li>`;
-                });
-                sourcesHtml += '</ul></div>';
-            }
-            
-            const formattedText = summaryText.replace(/\n/g, '<br>');
-            summaryContent.innerHTML = `<p>${formattedText}</p>${sourcesHtml}`;
-        }
-
-        function displaySummaryError(message) {
-            summaryContent.innerHTML = `<p style="color: #ff6666;">${message}</p>`;
         }
         
-        async function fetchWithExponentialBackoff(url, options, retries = 5, delay = 1000) {
-            for (let i = 0; i < retries; i++) {
-                try {
-                    const response = await fetch(url, options);
-                    if (response.status !== 429) { // Not a rate-limiting error
-                        return response;
-                    }
-                } catch (error) {
-                    if (i === retries - 1) throw error; // Rethrow last error
-                }
-                await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, i)));
-            }
-        }
-
-        // Initial counter update
+        // Update counter immediately and then every second
         updateCounter();
         setInterval(updateCounter, 1000);
     </script>
 </body>
 </html>
-
-
 
