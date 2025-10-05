@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Metadata -->
+    <title>Epstein Files Tracker - The Wait Continues</title>
+    <meta name="description" content="Track in real-time how many days it has been since the last Epstein files were released. Demand transparency and accountability with our live counter and timeline.">
+    <meta name="keywords" content="Epstein files, Jeffrey Epstein, transparency, accountability, file tracker, DC Pulse, document release">
+    <meta name="author" content="Inside DC Pulse">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://[O-SEU-URL-AQUI.COM]">
+
+    <!-- Open Graph Tags (for Social Media & AI Previews) -->
+    <meta property="og:title" content="Epstein Files Tracker: The Wait Continues">
+    <meta property="og:description" content="It's been days since the last document release. How long must we wait for full transparency? Track the time live.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://[O-SEU-URL-AQUI.COM]">
+    <meta property="og:image" content="https://placehold.co/1200x630/ff3333/FFFFFF?text=Epstein+Files%0AAccountability+Tracker">
+    <meta property="og:site_name" content="Inside DC Pulse">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Epstein Files Tracker: The Wait Continues">
+    <meta name="twitter:description" content="It's been days since the last document release. How long must we wait for full transparency? Track the time live.">
+    <meta name="twitter:image" content="https://placehold.co/1200x630/ff3333/FFFFFF?text=Epstein+Files%0AAccountability+Tracker">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .clock-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .promises {
+            background: rgba(255, 0, 0, 0.1);
+            border-left: 4px solid #ff3333;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+
+        .promises p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-style: italic;
+            color: #cccccc;
+        }
+
+        .promises p:last-child {
+            margin-bottom: 0;
+        }
+
+        .question {
+            font-size: 1.5em;
+            margin: 30px 0;
+            color: #ff6666;
+            font-weight: bold;
+        }
+
+        .counter-label {
+            font-size: 1.3em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #ff9999;
+        }
+
+        .counter {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .time-box {
+            background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+            padding: 30px;
+            border-radius: 15px;
+            min-width: 140px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(255, 51, 51, 0.3);
+        }
+
+        .time-value {
+            font-size: 3.5em;
+            font-weight: bold;
+            color: #ff3333;
+            display: block;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .time-label {
+            font-size: 1em;
+            color: #999999;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .timeline {
+            text-align: left;
+            margin: 40px 0;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .timeline h3 {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            color: #ff9999;
+        }
+
+        .timeline-item {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+
+        .timeline-date {
+            color: #ff6666;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #666666;
+            line-height: 1.6;
+        }
+
+        .highlight-info {
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 0 auto 30px auto;
+        }
+
+        .highlight-info p {
+            font-size: 1.1em;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .highlight-info p:first-child {
+            margin-bottom: 10px;
+        }
+        
+        .verify-btn {
+            background: rgba(66, 133, 244, 0.2);
+            color: #8ab4f8;
+            border: 1px solid rgba(66, 133, 244, 0.5);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        .verify-btn:hover {
+            background: rgba(66, 133, 244, 0.4);
+            color: #fff;
+        }
+
+        .buttons-container {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        .social-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .social-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .social-btn:hover {
+            transform: scale(1.05);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .twitter-btn { background: linear-gradient(145deg, #1DA1F2, #0d8bd9); }
+        .twitter-btn:hover { box-shadow: 0 8px 25px rgba(29, 161, 242, 0.4); }
+        .facebook-btn { background: linear-gradient(145deg, #1877F2, #0e63d1); }
+        .facebook-btn:hover { box-shadow: 0 8px 25px rgba(24, 119, 242, 0.4); }
+        .whatsapp-btn { background: linear-gradient(145deg, #25D366, #1ea952); }
+        .whatsapp-btn:hover { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); }
+        .reddit-btn { background: linear-gradient(145deg, #FF4500, #e63e00); }
+        .reddit-btn:hover { box-shadow: 0 8px 25px rgba(255, 69, 0, 0.4); }
+        .copy-btn { background: linear-gradient(145deg, #6c757d, #5a6268); cursor: pointer; }
+        .copy-btn:hover { box-shadow: 0 8px 25px rgba(108, 117, 125, 0.4); }
+        .copy-btn.copied { background: linear-gradient(145deg, #28a745, #218838); }
+
+        .action-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid;
+        }
+
+        .action-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .donate-btn {
+            background: linear-gradient(145deg, #ffa500, #ff8c00);
+            color: white;
+            border-color: rgba(255, 165, 0, 0.3);
+        }
+
+        .donate-btn:hover {
+            box-shadow: 0 10px 30px rgba(255, 165, 0, 0.5);
+        }
+
+        .gemini-btn {
+            background: linear-gradient(145deg, #4285F4, #357ae8);
+            color: white;
+            border-color: rgba(66, 133, 244, 0.3);
+        }
+        
+        .gemini-btn:hover {
+            box-shadow: 0 10px 30px rgba(66, 133, 244, 0.5);
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background: #2a2a2a;
+            padding: 30px 40px;
+            border-radius: 15px;
+            max-width: 700px;
+            max-height: 90vh;
+            overflow-y: auto;
+            width: 100%;
+            text-align: left;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+        
+        .modal-content h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .modal-content p, .modal-content li {
+            color: #ccc;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .modal-content ul {
+            list-style-position: inside;
+            padding-left: 0;
+            margin-bottom: 15px;
+        }
+
+        .modal-content a {
+            color: #4285F4;
+            text-decoration: none;
+        }
+
+        .modal-content a:hover {
+            text-decoration: underline;
+        }
+
+        #legalModal h2 { color: #ff8c00; }
+        #summaryModal h2 { color: #4285F4; }
+        
+        .sources-list {
+            border-top: 1px solid #444;
+            padding-top: 15px;
+            margin-top: 20px;
+        }
+
+        .sources-list h3 {
+            color: #aaa;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2em;
+            color: #888;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-btn:hover {
+            color: #fff;
+        }
+
+        .legal-link {
+            cursor: pointer;
+            color: #999;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        .legal-link:hover {
+            color: #fff;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 5px solid #555;
+            border-top-color: #fff;
+            animation: spin 1s linear infinite;
+            margin: 40px auto;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Article Styles */
+        .article-section {
+            text-align: left;
+            margin-top: 40px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+        .article-section h2 {
+            font-size: 1.8em;
+            color: #ff6666;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #444;
+            padding-bottom: 10px;
+        }
+        .article-section h3 {
+            font-size: 1.4em;
+            color: #ff9999;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        .article-section p {
+            line-height: 1.8;
+            color: #cccccc;
+            margin-bottom: 15px;
+        }
+        .article-section ul {
+            list-style-position: inside;
+            padding-left: 20px;
+            margin-bottom: 20px;
+            color: #cccccc;
+        }
+        .article-section li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+        .article-section hr {
+            border: 0;
+            height: 1px;
+            background-color: #444;
+            margin: 40px 0;
+        }
+        .article-section strong {
+            color: #fff;
+        }
+
+        .centered-btn-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8em; }
+            .time-box {
+                min-width: 100px;
+                padding: 20px;
+            }
+            .time-value { font-size: 2.5em; }
+            .promises p { font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="clock-icon">⏰</div>
+        <h1>EPSTEIN FILES: THE WAIT CONTINUES</h1>
+
+        <div class="promises">
+            <p>They said <strong>"complete transparency"</strong></p>
+            <p>They said <strong>"all names will be released"</strong></p>
+            <p>They said <strong>"the public deserves the truth"</strong></p>
+        </div>
+
+        <div class="question">So... where are they?</div>
+
+        <div class="counter-label">Days Since Last File Release:</div>
+        
+        <div class="counter">
+            <div class="time-box">
+                <span class="time-value" id="days">0</span>
+                <span class="time-label">Days</span>
+            </div>
+            <div class="time-box">
+                <span class="time-value" id="hours">00</span>
+                <span class="time-label">Hours</span>
+            </div>
+            <div class="time-box">
+                <span class="time-value" id="minutes">00</span>
+                <span class="time-label">Minutes</span>
+            </div>
+            <div class="time-box">
+                <span class="time-value" id="seconds">00</span>
+                <span class="time-label">Seconds</span>
+            </div>
+        </div>
+
+        <div class="timeline">
+            <h3>📋 TIMELINE OF RELEASES:</h3>
+            <div class="timeline-item"><span class="timeline-date">3 Jan 2024</span> - First batch released (943 pages)</div>
+            <div class="timeline-item"><span class="timeline-date">10 Jan 2024</span> - Second batch (4,553 pages total)</div>
+            <div class="timeline-item"><span class="timeline-date">27 Feb 2025</span> - DOJ declassification begins</div>
+            <div class="timeline-item"><span class="timeline-date">2 Sep 2025</span> - House Committee releases 33,000+ pages</div>
+            <div class="timeline-item"><span class="timeline-date">26 Sep 2025</span> - Third batch (Musk, Thiel, Bannon mentioned)</div>
+            <div class="timeline-item"><span class="timeline-date">??? ????</span> - Next release: <strong>Unknown</strong></div>
+        </div>
+
+        <div class="buttons-container">
+            <a href="https://buy.stripe.com/4gM28s0xU0Ff4Cp5oN3wQ01" class="action-btn donate-btn" target="_blank">💰 Support Transparency</a>
+            <a href="#" class="action-btn gemini-btn" id="geminiSummaryBtn">✨ Get Latest Summary</a>
+        </div>
+
+        <div class="social-buttons">
+            <a href="#" class="social-btn twitter-btn" id="twitterBtn" target="_blank">📤 X/Twitter</a>
+            <a href="#" class="social-btn facebook-btn" id="facebookBtn" target="_blank">📘 Facebook</a>
+            <a href="#" class="social-btn whatsapp-btn" id="whatsappBtn" target="_blank">💬 WhatsApp</a>
+            <a href="#" class="social-btn reddit-btn" id="redditBtn" target="_blank">📮 Reddit</a>
+            <a href="#" class="social-btn copy-btn" id="copyBtn">🔗 Copy Link</a>
+        </div>
+
+        <div class="footer">
+            <div class="highlight-info">
+                <p>
+                    <span><strong>75% of Americans</strong> want full transparency on the Epstein files.</span>
+                    <button id="verifyStatBtn" class="verify-btn">✨ Verify</button>
+                </p>
+                <p>Last updated: September 26, 2025</p>
+            </div>
+
+            <div class="article-section">
+                <h2>Epstein Files: The Battle for Transparency and the Missing Client List</h2>
+                
+                <h3>Introduction: The Secret Behind the Epstein Files</h3>
+                <p>The <strong>Epstein Files</strong> contain more than <strong>300 gigabytes of classified evidence</strong> collected during the criminal investigations of financier <strong>Jeffrey Epstein</strong>, who was convicted of sex trafficking. These files include contact lists, flight manifests, and personal diaries.</p>
+                <p>Their existence has fueled <strong>global speculation</strong>—particularly about a so-called <strong>“Epstein client list”</strong> allegedly used to blackmail powerful figures.</p>
+                <p>Public and political pressure for transparency has intensified. While <strong>Donald Trump</strong> once vowed to release the documents during his 2024 campaign, the case has since turned into a deeply <strong>polarized political battle</strong>, with Trump calling the story a “<strong>Democrat Hoax</strong>.”</p>
+                
+                <hr>
+
+                <h2>I. High-Profile Figures Named in the Epstein Files</h2>
+                <p>Although the term “<strong>Epstein client list</strong>” remains unofficial, several prominent names have appeared in released materials — from <strong>flight logs</strong> to <strong>court exhibits</strong>.</p>
+                
+                <h3>Elon Musk, Bill Gates, and Steve Bannon</h3>
+                <p>Documents from the <strong>House Oversight Committee</strong> mention several elite figures:</p>
+                <ul>
+                    <li><strong>Elon Musk:</strong> A December 6, 2014 entry in Epstein’s calendar reads, “Reminder: Elon Musk for Ireland – is this still happening?” No evidence suggests Musk made the trip, though Epstein often invited guests to his private island, <strong>Little St. James</strong>. Musk, a former Trump ally, briefly claimed Trump appeared in the Epstein Files before deleting his post in June 2025.</li>
+                    <li><strong>Bill Gates:</strong> A December 5, 2014 note lists a “breakfast TBD” with Microsoft co-founder <strong>Bill Gates</strong>. Melinda Gates revealed in 2022 that Bill’s relationship with Epstein contributed to their divorce.</li>
+                    <li><strong>Steve Bannon:</strong> A February 2019 entry reads “breakfast with Steve Bannon.” Bannon, a close Trump ally and former White House adviser, has not commented.</li>
+                </ul>
+                <p>New files released in <strong>September 2025</strong> also mention financier <strong>Peter Thiel</strong> alongside Musk and Bannon.</p>
+                
+                <h3>Trump, Clinton, and the “Birthday Book”</h3>
+                <p>Epstein’s estate turned over to Congress a 2003 guestbook known as the <strong>“Birthday Book.”</strong></p>
+                <ul>
+                    <li><strong>Donald Trump:</strong> The book allegedly contained a note from Trump saying, “We’ve got certain things in common, Jeffrey,” accompanied by a sketch. The White House denied Trump wrote or signed it. Trump and Epstein were longtime acquaintances until their friendship reportedly ended in the early 2000s.</li>
+                    <li><strong>Bill Clinton:</strong> The book also contained a handwritten message attributed to <strong>Bill Clinton</strong>, referencing Epstein’s “childlike curiosity.”</li>
+                    <li><strong>Other Mentions:</strong> Public court documents from <strong>January 2024</strong> also referenced <strong>Prince Andrew</strong>, <strong>Alan Dershowitz</strong>, and <strong>Stephen Hawking</strong>, though none were formally accused of crimes.</li>
+                </ul>
+
+                <hr>
+
+                <h2>II. The Political and Legal Battle Over the Files</h2>
+                <p>The handling of the <strong>Epstein Files</strong> under the <strong>Trump administration</strong> in 2025 sparked bipartisan criticism and claims of political manipulation.</p>
+
+                <h3>DOJ Contradictions and Trump’s Changing Narrative</h3>
+                <p>In <strong>February 2025</strong>, U.S. Attorney General <strong>Pam Bondi</strong> told reporters that the “client list” was “on her desk for review,” under President Trump’s orders.</p>
+                <p>But by <strong>July 2025</strong>, the <strong>Department of Justice (DOJ)</strong> and <strong>FBI</strong> issued a memo concluding:</p>
+                <ul>
+                    <li>There was <strong>no incriminating client list</strong>.</li>
+                    <li>No credible evidence supported blackmail allegations.</li>
+                    <li><strong>Epstein’s 2019 death</strong> was ruled a <strong>suicide</strong>, consistent with earlier investigations.</li>
+                </ul>
+                <p>These findings were met with skepticism. Trump—who once promised full transparency—later dismissed the files as fake, urging his supporters to ignore the “<strong>Epstein Hoax</strong>.”</p>
+                <p>Some officials accused the DOJ of <strong>protecting Trump</strong>. Senator <strong>Dick Durbin</strong> claimed FBI agents were instructed to “flag” any files mentioning Trump. The FBI allegedly redacted his name from early records, arguing he was a private citizen in 2006 when the first Epstein probe began.</p>
+
+                <h3>Congressional Pressure and Public Opinion</h3>
+                <p>Democrats in Congress, citing a <strong>“White House cover-up,”</strong> pushed for a full release of the files. House Speaker <strong>Mike Johnson</strong> delayed a vote, reportedly giving the Trump administration “room to act.”</p>
+                <p>Public support for transparency remains overwhelming:</p>
+                <ul>
+                    <li><strong>74% of Americans</strong> want the Epstein Files released in full.</li>
+                    <li><strong>67% of Republicans</strong> support full disclosure — even as Trump calls it a hoax.</li>
+                    <li><strong>61% of Americans</strong> disapprove of how the administration has handled the case.</li>
+                </ul>
+                
+                <div class="centered-btn-container">
+                    <a href="https://buy.stripe.com/4gM28s0xU0Ff4Cp5oN3wQ01" class="action-btn donate-btn" target="_blank">💰 Support Transparency</a>
+                </div>
+
+                <hr>
+
+                <h2>III. Controversies Surrounding the Epstein Investigation</h2>
+                <p>The Trump administration’s management of the case has raised <strong>serious ethical questions</strong>.</p>
+                
+                <h3>Ghislaine Maxwell’s Unusual Interview and Transfer</h3>
+                <p>Deputy Attorney General <strong>Todd Blanche</strong>—who also serves as Trump’s personal lawyer—met with <strong>Ghislaine Maxwell</strong>, Epstein’s convicted accomplice, in <strong>July 2025</strong>. Maxwell was granted <strong>limited immunity</strong> and used the interview to praise Trump, claiming she had “never seen him in any improper setting.”</p>
+                <p>Shortly after, Maxwell was <strong>transferred to a minimum-security prison</strong>, an <strong>unusual move</strong> for a convicted sex trafficker. According to a leaked (and denied) DOJ recording, the transfer “violated policy” and was meant “to keep her quiet.”</p>
+
+                <h3>Judicial Rejection of DOJ Requests</h3>
+                <p>The DOJ attempted to <strong>unseal grand jury transcripts</strong> from the Epstein and Maxwell cases, claiming it would provide “new insights.” A federal judge <strong>denied the motion</strong>, accusing the DOJ of offering <strong>“publicly dishonest explanations.”</strong></p>
+
+                <h2>Conclusion: The Ongoing Fight for Truth and Accountability</h2>
+                <p>The <strong>Epstein Files</strong> controversy endures because official conclusions—no client list, confirmed suicide—contradict deep public mistrust.</p>
+                <p>Epstein’s <strong>victims and families</strong> continue to demand the <strong>full release</strong> of all documents. Some survivors are compiling their <strong>own internal list of associates</strong> to publish publicly, citing frustration with government secrecy.</p>
+                <p>For many Americans, the Epstein case represents more than a political scandal. It’s a <strong>moral test</strong>—whether the rich and powerful can traffic children and still evade justice.</p>
+            </div>
+
+            <div class="branding">
+                <p style="margin-top: 30px; font-size: 1.1em; color: #ff6666; font-weight: bold;">INSIDE DC PULSE</p>
+                <p style="margin-top: 5px; font-size: 0.9em;">Tracking accountability in Washington</p>
+                <p style="margin-top: 10px;"><a href="mailto:insidedcpulse@gmail.com" style="color: #ff9999; text-decoration: none;">insidedcpulse@gmail.com</a></p>
+                <p style="margin-top: 15px; font-size: 0.85em; color: #888888;">🔒 Secure donations processed by Stripe</p>
+                <p style="margin-top: 15px; font-size: 0.85em;"><span class="legal-link" id="legalLink">Legal & Privacy</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Legal Modal -->
+    <div class="modal-overlay" id="legalModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeLegalBtn">&times;</span>
+            <h2>Legal Information</h2>
+            <p><strong>Privacy Policy:</strong></p>
+            <ul>
+                <li>This website is purely informational and does not collect, store, or share any personal data from its visitors.</li>
+                <li>We do not use cookies or any other tracking technologies. Your visit is completely anonymous.</li>
+            </ul>
+            <p><strong>Donations:</strong></p>
+            <ul>
+                <li>All donations are processed securely by Stripe, a trusted third-party payment platform.</li>
+                <li>We do not see, handle, or store any of your payment information. Stripe's privacy policy applies to all transactions.</li>
+            </ul>
+            <p><strong>Disclaimer:</strong></p>
+            <ul>
+                <li>The content on this page is for informational purposes only. We strive for accuracy but cannot guarantee all information is complete or up-to-date.</li>
+                <li>All information and data presented in the articles and timelines are compiled from publicly available records, court documents, and reputable news sources.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Gemini Summary Modal -->
+    <div class="modal-overlay" id="summaryModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeSummaryBtn">&times;</span>
+            <h2 id="summaryModalTitle">✨ AI-Powered Summary</h2>
+            <div id="summaryContent">
+                <!-- Loader and content will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const lastReleaseDate = new Date('2025-09-26T00:00:00').getTime();
+
+        function updateCounter() {
+            const now = new Date().getTime();
+            const timeDiff = now - lastReleaseDate;
+
+            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+
+            updateSocialLinks(days);
+        }
+
+        function updateSocialLinks(days) {
+            const url = encodeURIComponent(window.location.href);
+            const twitterText = encodeURIComponent(`🚨 It's been ${days} days since the last Epstein files release. Where is the transparency? #EpsteinFiles #Transparency #InsideDCPulse`);
+            const facebookText = encodeURIComponent(`75% of Americans want full transparency on the Epstein files. It's been ${days} days since the last release. When will they deliver?`);
+            const whatsappText = encodeURIComponent(`🚨 It's been ${days} days since the last Epstein files release. They promised transparency... Check the tracker:`);
+            const redditTitle = encodeURIComponent(`Epstein Files Tracker: ${days} days since last release. Where's the accountability?`);
+
+            document.getElementById('twitterBtn').href = `https://twitter.com/intent/tweet?text=${twitterText}&url=${url}`;
+            document.getElementById('facebookBtn').href = `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${facebookText}`;
+            document.getElementById('whatsappBtn').href = `https://wa.me/?text=${whatsappText}%20${url}`;
+            document.getElementById('redditBtn').href = `https://reddit.com/submit?url=${url}&title=${redditTitle}`;
+        }
+
+        function copyLink() {
+            const url = window.location.href;
+            const textArea = document.createElement("textarea");
+            textArea.value = url;
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                const btn = document.getElementById('copyBtn');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '✅ Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.remove('copied');
+                }, 2000);
+            } catch (err) {
+                console.error('Fallback: Oops, unable to copy', err);
+            }
+            document.body.removeChild(textArea);
+        }
+        
+        document.getElementById('copyBtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            copyLink();
+        });
+
+
+        // --- Modal Functionality ---
+        const legalModal = document.getElementById('legalModal');
+        const summaryModal = document.getElementById('summaryModal');
+
+        document.getElementById('legalLink').onclick = (e) => { e.preventDefault(); legalModal.style.display = 'flex'; };
+        document.getElementById('closeLegalBtn').onclick = () => { legalModal.style.display = 'none'; };
+        document.getElementById('closeSummaryBtn').onclick = () => { summaryModal.style.display = 'none'; };
+        
+        window.addEventListener('click', (event) => {
+            if (event.target == legalModal) {
+                legalModal.style.display = 'none';
+            }
+            if (event.target == summaryModal) {
+                summaryModal.style.display = 'none';
+            }
+        });
+
+        // --- Gemini API Functionality ---
+        const geminiSummaryBtn = document.getElementById('geminiSummaryBtn');
+        const verifyStatBtn = document.getElementById('verifyStatBtn');
+        const summaryContent = document.getElementById('summaryContent');
+        const summaryModalTitle = document.getElementById('summaryModalTitle');
+
+        geminiSummaryBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            summaryModalTitle.innerHTML = '✨ AI-Powered Summary';
+            summaryModal.style.display = 'flex';
+            getLatestSummary();
+        });
+
+        verifyStatBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            summaryModalTitle.innerHTML = '✨ AI Fact-Check';
+            summaryModal.style.display = 'flex';
+            verifyStatistic();
+        });
+
+        async function getLatestSummary() {
+            summaryContent.innerHTML = '<div class="loader"></div>';
+
+            const apiKey = ""; // API key is handled by the environment
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+            const systemPrompt = "You are a neutral, factual news analyst. Your task is to summarize the most recent significant news and official developments regarding the Jeffrey Epstein files based on public information. Do not speculate or include opinions. Focus on information from the last 6 months.";
+            const userQuery = "Summarize the latest developments on the Epstein files release.";
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                tools: [{ "google_search": {} }],
+                systemInstruction: { parts: [{ text: systemPrompt }] },
+            };
+
+            try {
+                const response = await fetchWithExponentialBackoff(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) { throw new Error(`API request failed with status ${response.status}`); }
+                
+                const result = await response.json();
+                const candidate = result.candidates?.[0];
+
+                if (candidate && candidate.content?.parts?.[0]?.text) {
+                    const text = candidate.content.parts[0].text;
+                    let sources = [];
+                    const groundingMetadata = candidate.groundingMetadata;
+                    if (groundingMetadata && groundingMetadata.groundingAttributions) {
+                        sources = groundingMetadata.groundingAttributions
+                            .map(attr => ({ uri: attr.web?.uri, title: attr.web?.title }))
+                            .filter(source => source.uri && source.title);
+                    }
+                    displaySummary(text, sources);
+                } else {
+                    displaySummaryError("Could not retrieve a summary at this time. The response from the AI was empty.");
+                }
+            } catch (error) {
+                console.error("Error fetching summary:", error);
+                displaySummaryError(`An error occurred while fetching the summary: ${error.message}`);
+            }
+        }
+
+        async function verifyStatistic() {
+            summaryContent.innerHTML = '<div class="loader"></div>';
+
+            const apiKey = ""; // API key is handled by the environment
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+            const systemPrompt = "You are a neutral fact-checking assistant. Your goal is to find and present evidence from reliable sources (like polls or reputable news organizations) regarding a specific statistic. State clearly whether the sources confirm, contradict, or provide nuance to the claim. Summarize the findings and always cite your sources.";
+            const userQuery = "Fact-check the claim that '75% of Americans want full transparency on the Epstein files.' Find recent polls or reports from the last 1-2 years that address public opinion on this topic.";
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                tools: [{ "google_search": {} }],
+                systemInstruction: { parts: [{ text: systemPrompt }] },
+            };
+
+            try {
+                const response = await fetchWithExponentialBackoff(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) { throw new Error(`API request failed with status ${response.status}`); }
+                
+                const result = await response.json();
+                const candidate = result.candidates?.[0];
+
+                if (candidate && candidate.content?.parts?.[0]?.text) {
+                    const text = candidate.content.parts[0].text;
+                    let sources = [];
+                    const groundingMetadata = candidate.groundingMetadata;
+                    if (groundingMetadata && groundingMetadata.groundingAttributions) {
+                        sources = groundingMetadata.groundingAttributions
+                            .map(attr => ({ uri: attr.web?.uri, title: attr.web?.title }))
+                            .filter(source => source.uri && source.title);
+                    }
+                    displaySummary(text, sources);
+                } else {
+                    displaySummaryError("Could not retrieve a fact-check at this time. The response from the AI was empty.");
+                }
+            } catch (error) {
+                console.error("Error fetching fact-check:", error);
+                displaySummaryError(`An error occurred while fetching the fact-check: ${error.message}`);
+            }
+        }
+
+        function displaySummary(summaryText, sources) {
+            let sourcesHtml = '';
+            if (sources.length > 0) {
+                sourcesHtml = '<div class="sources-list"><h3>Sources:</h3><ul>';
+                sources.forEach(source => {
+                    sourcesHtml += `<li><a href="${source.uri}" target="_blank" rel="noopener noreferrer">${source.title}</a></li>`;
+                });
+                sourcesHtml += '</ul></div>';
+            }
+            
+            const formattedText = summaryText.replace(/\n/g, '<br>');
+            summaryContent.innerHTML = `<p>${formattedText}</p>${sourcesHtml}`;
+        }
+
+        function displaySummaryError(message) {
+            summaryContent.innerHTML = `<p style="color: #ff6666;">${message}</p>`;
+        }
+        
+        async function fetchWithExponentialBackoff(url, options, retries = 5, delay = 1000) {
+            for (let i = 0; i < retries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (response.status !== 429) { // Not a rate-limiting error
+                        return response;
+                    }
+                } catch (error) {
+                    if (i === retries - 1) throw error; // Rethrow last error
+                }
+                await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, i)));
+            }
+        }
+
+        // Initial counter update
+        updateCounter();
+        setInterval(updateCounter, 1000);
+    </script>
+</body>
+</html>
+
+
+
