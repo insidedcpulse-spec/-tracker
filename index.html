@@ -810,7 +810,7 @@
         async function verifyStatistic() {
             summaryContent.innerHTML = '<div class="loader"></div>';
 
-            const apiKey = ""; // API key is handled by the environment
+            const apiKey = 'AIzaSyCKoUbV93OBZ3S72FlXLgZzETciHM2xES8';
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
 
             const systemPrompt = "You are a neutral fact-checking assistant. Your goal is to find and present evidence from reliable sources (like polls or reputable news organizations) regarding a specific statistic. State clearly whether the sources confirm, contradict, or provide nuance to the claim. Summarize the findings and always cite your sources.";
