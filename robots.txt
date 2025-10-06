@@ -1,4 +1,6 @@
+# This allows every bot (search engines, AI, etc.) to access the entire site.
 User-agent: *
 Allow: /
 
+# Sitemap location for all crawlers
 Sitemap: https://insidedcpulse.com/sitemap.xml
